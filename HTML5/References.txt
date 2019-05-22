@@ -1,0 +1,18 @@
+1) cmder tool
+2) https://www.npmjs.com/package/live-server
+ 	- live-server -v
+	- "live-server" for deploy the html on server.
+3) https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+4) how to get embed code in Youtube Share -> embed
+5) instead of watch, replace embed
+	https://www.youtube.com/watch?v=-G7bJVAIiEI - https://www.youtube.com/embed/-G7bJVAIiEI
+
+29/04/2019:
+	1) Video element
+
+30/04/2019:
+	1) Local Storage - In Chrome, Developer Options -> Application -> Local Storage
+
+
+Git Repo:
+https://github.com/prafful/html5April2019

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body { 
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#div1 {
+  width: 350px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#div2 {
+  width: 350px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+    var totalcount = 0;
+    var remaining = 11;
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  if(document.getElementById(data) != ev.target.id){
+  ev.target.appendChild(document.getElementById(data));
+  totalcount = totalcount+1;
+  remaining = remaining -1;
+  document.getElementById("span1").innerHTML = totalcount;
+  document.getElementById("span2").innerHTML = remaining;
+  }
+}
+function drop1(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  if(document.getElementById(data) != ev.target.id){ 
+  ev.target.appendChild(document.getElementById(data));
+  totalcount = totalcount-1;
+  remaining = remaining +1;
+  document.getElementById("span1").innerHTML = totalcount;
+  document.getElementById("span2").innerHTML = remaining;
+  }
+}
+</script>
+</head>
+<body>
+
+<p>Drag drop</p>
+
+Total Player: <span id="span1"></span>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+Remaining Player: <span id="span2"></span>
+<div id="div2" ondrop="drop1(event)" ondragover="allowDrop(event)">
+<!-- <img id="drag1" src="images/logo.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
+<ul>
+    <li id="ul1" draggable="true" ondragstart="drag(event)" >player 1</li>
+    <li id="ul2" draggable="true" ondragstart="drag(event)" >player 2</li>
+    <li id="ul3" draggable="true" ondragstart="drag(event)" >player 3</li>
+    <li id="ul4" draggable="true" ondragstart="drag(event)" >player 4</li>
+    <li id="ul5" draggable="true" ondragstart="drag(event)" >player 5</li>
+    <li id="ul6" draggable="true" ondragstart="drag(event)" >player 6</li>
+    <li id="ul7" draggable="true" ondragstart="drag(event)" >player 7</li>
+    <li id="ul8" draggable="true" ondragstart="drag(event)" >player 8</li>
+    <li id="ul9" draggable="true" ondragstart="drag(event)" >player 9</li>
+    <li id="ul10" draggable="true" ondragstart="drag(event)" >player 10</li>
+    <li id="ul11" draggable="true" ondragstart="drag(event)" >player 11</li>
+</ul>
+</div>
+<!-- <img id="drag2" src="images/cts_background.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
+</body>
+</html>

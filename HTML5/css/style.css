@@ -1,0 +1,81 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    background: linear-gradient(to right, red , yellow);
+    z-index: -2;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.menu{
+    float: right;
+}
+.menucontainer {
+    width: 100%;  
+}
+.menucontainer ul li:hover{
+    color: black;
+    cursor: pointer;    
+    color: aliceblue; 
+    font-weight: bolder;     
+    border: 1px solid gold;
+    padding: 1px;    
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.menucontainer ul li{
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;  
+    padding: 1px; 
+    width:20%;    
+}
+.videoContainer{
+    z-index: -1;
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;    
+    
+   
+}
+.messagecontainer{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+.messagecontainer h2{
+    font-size: 28px;
+    text-shadow:orangered;
+}
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color:mediumslateblue;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span{
+   cursor: pointer; 
+}
+
+button span:hover{
+    cursor: pointer; 
+ }
